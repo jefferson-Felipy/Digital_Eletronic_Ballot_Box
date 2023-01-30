@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_Eletronic_Ballot_box | Javascript | Html | Sass | Css </title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <!-- -------------- PRELOAD AO ENTRAR NO SITE ----------------- -->
+    <div class="load">
+        <img src="./public/images/img_preload1.jpg" alt="">
+        <div class="div_preload">
+            <p>Carregando a Urna</p>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+
+    <!-- -------------- PRELOAD AO APERTAR NO BOTAO DE CONFIRMAR OU BRANCO ----------------- -->
+    <div class="load_confirm">
+        <img src="./public/images/img_preload1.jpg" alt="">
+        <div class="div_preload">
+            <p>Confirmando Voto</p>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+
+    <!-- -------------- PRELOAD AO APERTAR NO BOTAO DE FINALIAR VOTACAO ----------------- -->
+    <div class="load_result">
+        <img src="./public/images/img_preload1.jpg" alt="">
+        <div class="div_preload">
+            <p>Fazendo os calculos</p>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+    <article class="container_urnaEletronia">
+        <!-- --------------------------------------------------------------------- -->
+        <div class="title_info">
+            <h1 class="title_urna">Urna Eletronica Digital</h1>
+            <button class="btn_info">Informaçoes sobre a Eleiçao</button>
+        </div>
+        <!-- --------------------------------------------------------------------- -->
+        <section class="field_camp">
+            <section class="field_exibishion">
+
+                <div class="div_one">
+                    <h2 class="cargo_cand">Cargo Eleitoral</h2>
+
+                    <div class="group_field_exib">
+                        <p class="number">Numero: </p>
+
+                        <div class="cand_field">
+                            <p class="number_cand_field_one"></p>
+                            <p class="number_cand_field_two"></p>
+                        </div>
+                        <div class="cand_field_two"></div>
+
+                        <div class="img_field"></div>
+                    </div>
+                    
+                    <div class="field_numbers_cand">
+                        <p class="parag"> <small class="name_cand"></small></p>
+                        <p class="parag"> <small class="partido_cand"></small></p>
+                    </div>
+                </div>
+
+                <div class="div_two"></div>
+            </section>
+
+            <!-- --------------------------------------------------------------------- -->
+
+            <section class="field_buttons">
+                <div class="logo_urna">
+                    <img src="./public/images/logo_tse.jpg" alt="" class="logo_tse_img">
+                    <h2 class="logo_tse_h2">Justiça Eleitoral</h2>
+                </div>
+                <div class="btns_numbers">
+                    <button class="btns" onClick="click_btn('1');">1</button>
+                    <button class="btns" onClick="click_btn('2');">2</button>
+                    <button class="btns" onClick="click_btn('3');">3</button>
+                    <button class="btns" onClick="click_btn('4');">4</button>
+                    <button class="btns" onClick="click_btn('5');">5</button>
+                    <button class="btns" onClick="click_btn('6');">6</button>
+                    <button class="btns" onClick="click_btn('7');">7</button>
+                    <button class="btns" onClick="click_btn('8');">8</button>
+                    <button class="btns" onClick="click_btn('9');">9</button>
+                    <button class="btns" onClick="click_btn('0');">0</button>
+                </div>
+                <div class="btns_options">
+                    <button class="branco" onClick="branco();">Branco</button>
+                    <button class="corrigir" onClick="corrigir();">Corrigir</button>
+                    <button class="confirmar" onClick="confirmar();">Confirmar</button>
+                </div> 
+            </section>
+        </section>
+
+        <button class="the_end">Finalizar Votacao</button>
+        <section class="informa_eleicao">
+            <h2 class="title_res_urna">Resultado da eleicao 2022</h2>
+            <button class="reiniciar" onclick="reiniciar();">Reiniciar Votacao</button>
+        </section>
+    </article>
+
+    
+    <script src="./js/index.js"></script>
+</body>
+</html>
