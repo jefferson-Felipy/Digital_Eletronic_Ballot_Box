@@ -1,0 +1,64 @@
+@import './mixins.scss';
+
+.load,.load_confirm,.load_result{
+    display:none;
+}
+.preload{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    background-color:rgb(39, 192, 57);
+    background-image:url('../images/img_preload2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index:1000;
+    @include centred_elements;
+    flex-direction:column;
+    align-items:center;
+
+    img{
+        width:400px;
+        height:300px;
+        border-radius:5px;
+        opacity: 1;
+        margin:25px;
+    }
+
+    .div_preload{
+        margin:10px;
+        display:flex;
+        margin-top:60px;
+
+        p{
+            font-size: 28px;
+            color:#fff;
+            font-weight:bold;
+        }
+
+        .one,.two,.three{
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background:#fff;
+            margin:0px 10px;
+        }
+        .one{
+            animation:animation_preload 1s ease-in-out infinite alternate;
+        }
+        .two{
+            animation:animation_preload 1.1s ease-in-out infinite alternate;
+        }
+        .three{
+            animation:animation_preload 1.2s ease-in-out infinite alternate;
+        }
+
+        @keyframes animation_preload{
+            0%{
+                transform: scale(.5);
+            }
+            100%{
+                transform: scale(1.5);
+            }
+        }
+    }
+}

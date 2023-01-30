@@ -1,0 +1,309 @@
+@import './mixins.scss';
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    width:100vw;
+    height:100vh;
+    @include centred_elements;
+    background-image:url('../images/bandeira.png');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.container_urnaEletronia{
+    width:95%;
+    height:95vh;
+    margin-top:10px;
+    background-color:rgba(138, 139, 138, 0.911);
+    border-radius:10px;
+
+    .title_info{
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+
+        .title_urna{
+            color:#fff;
+            text-align:center;
+            margin:10px;
+            text-decoration:underline;
+        }
+
+        .btn_info{
+            width:180px;
+            margin:10px 10px 2px 10px;
+            border-radius:5px;
+            border:none;
+            font-size:17px;
+            background-color:rgba(222, 231, 222, 0.911);
+            cursor:poiner;
+
+            &:hover{
+                background-color:rgba(144, 147, 144, 0.911);
+                color:#fff;
+            }
+        }
+    }
+    // ---------------------------------------------------------------
+
+    .field_camp{
+        display:flex;
+    }
+    // ---------------------------------------------------------------
+
+    .field_exibishion,.field_buttons{
+        width: 48%;
+        height:74vh;
+        border:2px solid #000;
+        margin:10px;
+        border-radius:5px;
+
+        .div_one{
+            width:100%;
+            height:56vh;
+            border-bottom:2px solid #000;
+
+            .cargo_cand{
+                width:100%;
+                height:40px;
+                font-size: 24px;
+                font-weight:400;
+                text-align:center;
+                margin:10px 0px;
+            }
+
+            .group_field_exib{
+                position:relative;
+                width:100%;
+                height:20vh;
+                display:flex;
+                align-items:center;
+
+                .number{
+                    font-size:20px;
+                    margin:10px ;
+                }
+
+                .cand_field,.cand_field_two{
+                    width:40%;
+                    display:flex;
+
+                    .number_cand_field_one,.number_cand_field_two{
+                        width: 90px;
+                        height:90px;
+                        border:3px solid #000;
+                        text-align:center;
+                        padding-top:30px;
+                        font-size:32px;
+                        margin:2px;
+
+                    }
+                }
+                .cand_field_two{
+                    position:absolute;
+                    left:19%;
+                }
+
+                .img_field{
+                    position:relative;
+                    width:32%;
+                    height:22vh;
+                    margin-left:5px;
+
+                    #img_cand{
+                        position:absolute;
+                        width:100%;
+                        height:100%;
+                        border:2px solid #000;
+                        margin:2px;
+                    }
+                }
+            }
+
+            .field_numbers_cand{
+                width:100%;
+                height: 220px;
+                display:flex;
+                flex-direction:column;
+                justify-content: space-around;
+
+                .parag{
+                    font-size:18px;
+                    margin:20px 10px 20px 10px;
+                }
+            }
+        }
+        .div_two{
+            height:100px;
+            margin-top:18px;
+            padding-left:12px;
+
+            .msg_voto{
+                margin:10px;
+            }
+            .msg_confirma{
+                margin:12px 15px;
+            }
+            .msg_corrige{
+                margin:12px 22px;
+            }
+        }
+        
+    }
+    .field_exibishion{
+        background-color: rgb(213, 213, 211);
+    }
+
+    // ---------------------------------------------------------------
+
+    .field_buttons{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        background-color:rgb(29, 28, 28);
+
+        .logo_urna{
+            width:100%;
+            height:130px;
+            background-color:rgb(240, 234, 234);
+            @include centred_elements;
+            align-items: center;
+
+            .logo_tse_img{
+                width:110px;
+                height:80px;
+                margin-right:40px;
+                filter: saturate(0);
+            }
+            .logo_tse_h2{
+                width:30px;
+            }
+
+        }
+        
+        .btns_numbers{
+            width:60%;
+            height:62vh;
+            margin-top:1.8rem;
+            box-shadow:1px 5px 9px rgb(130, 129, 129);
+            @include centred_elements;
+            flex-wrap: wrap;
+
+            .btns{
+                width:65px;
+                height:65px;
+                background-color:rgb(21, 21, 21);
+                color:#fff;
+                box-shadow:1px 5px 9px rgb(92, 92, 92);
+                border-radius:10px;
+                border:none;
+                margin:10px;
+                font-size: 20px;
+                font-weight:500;
+                cursor:pointer;
+                display:flex;
+                justify-content: flex-start;
+                padding:10px;
+
+                &:hover{
+                    background-color:rgb(186, 182, 182);
+                    color:rgb(41, 40, 40);
+                }
+            }
+        }
+        .btns_options{
+            width:80%;
+            height:20vh;
+            @include centred_elements;
+            align-items: center;
+            margin:10px;
+
+            .branco,.corrigir,.confirmar{
+                width:100px;
+                height:58px;
+                font-size:17px;
+                font-weight:400;
+                border-radius:3px;
+                border:none;
+                margin:10px;
+                cursor:pointer;
+            }
+            .branco:hover{
+                background-color:#ccc;
+            }
+
+            .corrigir{
+                background-color: brown;
+
+                &:hover{
+                    background-color:rgb(217, 53, 53);
+                }
+            }
+            .confirmar{
+                background-color: green;
+
+                &:hover{
+                    background-color:rgb(54, 202, 28);
+                }
+            }
+            
+        }
+    }
+
+    .the_end{
+        width:160px;
+        height:55px;
+        border-radius: 5px;
+        border:none;
+        font-size:18px;
+        font-weight:600;
+        cursor:pointer;
+        background-color:chartreuse;
+        margin:5px;
+        position:absolute;
+        left:42%;
+
+        &:hover{
+            background-color:rgb(54, 181, 94);
+        }
+    }
+    // ---------------------------------------------------------------
+
+    .informa_eleicao{
+        width: 48%;
+        height:74vh;
+        border:2px solid #000;
+        margin:10px;
+        border-radius:5px;
+        display:none;
+        background-color:#ccc;
+        margin:10px auto;
+        position:relative;
+
+        .title_res_urna{
+            text-align:center;
+            margin:10px;
+            text-decoration:underline;
+        }
+
+        .reiniciar{ 
+            width:120px;
+            height:50px;
+            position:absolute;
+            right:10px;
+            bottom:10px;
+            font-size:17px;
+            font-weight:600;
+            border-radius:5px;
+            border:none;
+            background-color:rgb(70, 66, 182);
+            cursor:pointer;
+        }
+    }
+}
+
+@import './proload.scss';
