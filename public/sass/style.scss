@@ -57,11 +57,6 @@ body{
         display:none;
 
         .bloco_info_eleicao{
-            h2{
-                text-align:center;
-                text-decoration:underline;
-            }
-
             position:absolute;
             left:30%;
             top:10%;
@@ -73,6 +68,11 @@ body{
             border-radius:10px;
             z-index:1000;
             padding:24px 0px 0px 6px;
+
+            h2{
+                text-align:center;
+                text-decoration:underline;
+            }
             
             p{
                 margin:6px;
@@ -94,6 +94,12 @@ body{
                 }
             }
         }
+        @media(max-width:1005px){
+            .bloco_info_eleicao{
+                left:5%;
+                width:90%;
+            }
+        }
     }
 
     // ---------------------------------------------------------------
@@ -108,12 +114,12 @@ body{
             }
             .field_exibishion{
                 width:100%;
-                height:55vh;
+                height:46vh;
 
                 // -------
                 .div_one{
                     width:100%;
-                    height:40vh;
+                    height:35vh;
                     border-bottom:2px solid #000;
         
                     .cargo_cand{
@@ -138,12 +144,12 @@ body{
                         }
         
                         .cand_field,.cand_field_two{
-                            width:40%;
+                            width:37%;
                             display:flex;
         
                             .number_cand_field_one,.number_cand_field_two{
-                                width: 60px;
-                                height:60px;
+                                width: 53px;
+                                height:53px;
                                 border:1.5px solid #000;
                                 text-align:center;
                                 padding-top:13px;
@@ -153,12 +159,12 @@ body{
                         }
                         .cand_field_two{
                             position:absolute;
-                            left:26%;
+                            left:22%;
                         }
         
                         .img_field{
-                            width:30%;
-                            height:22vh;
+                            width:38%;
+                            height:20vh;
                             
                             #img_cand{
                                 border:1.5px solid #000;
@@ -197,7 +203,7 @@ body{
 
             .field_buttons{
                 width:98%;
-                height:50vh;
+                height:31vh;
 
                 .logo_urna{
                     display:none;
@@ -206,7 +212,7 @@ body{
                 .btns_numbers{
                     margin-top:1rem;
                     width:98%;
-                    height:40vh;
+                    height:20vh;
 
                     .btns{
                         width:46px;
@@ -388,12 +394,12 @@ body{
 
             .branco,.corrigir,.confirmar{
                 width:100px;
-                height:58px;
+                height:44px;
                 font-size:17px;
                 font-weight:400;
                 border-radius:3px;
                 border:none;
-                margin:10px;
+                margin:5px;
                 cursor:pointer;
             }
             .branco:hover{

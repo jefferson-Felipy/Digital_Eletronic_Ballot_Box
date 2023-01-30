@@ -88,6 +88,12 @@ body {
 .container_urnaEletronia .info_body .bloco_info_eleicao .btn_close_info:hover {
   font-size: 45px;
 }
+@media (max-width: 1005px) {
+  .container_urnaEletronia .info_body .bloco_info_eleicao {
+    left: 5%;
+    width: 90%;
+  }
+}
 .container_urnaEletronia .field_camp {
   display: flex;
   flex-wrap: wrap;
@@ -98,11 +104,11 @@ body {
   }
   .container_urnaEletronia .field_camp .field_exibishion {
     width: 100%;
-    height: 55vh;
+    height: 46vh;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one {
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     border-bottom: 2px solid #000;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .cargo_cand {
@@ -125,12 +131,12 @@ body {
     margin: 10px;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field, .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field_two {
-    width: 40%;
+    width: 37%;
     display: flex;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field .number_cand_field_one, .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field .number_cand_field_two, .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field_two .number_cand_field_one, .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field_two .number_cand_field_two {
-    width: 60px;
-    height: 60px;
+    width: 53px;
+    height: 53px;
     border: 1.5px solid #000;
     text-align: center;
     padding-top: 13px;
@@ -139,11 +145,11 @@ body {
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .cand_field_two {
     position: absolute;
-    left: 26%;
+    left: 22%;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .img_field {
-    width: 30%;
-    height: 22vh;
+    width: 38%;
+    height: 20vh;
   }
   .container_urnaEletronia .field_camp .field_exibishion .div_one .group_field_exib .img_field #img_cand {
     border: 1.5px solid #000;
@@ -172,7 +178,7 @@ body {
   }
   .container_urnaEletronia .field_camp .field_buttons {
     width: 98%;
-    height: 50vh;
+    height: 31vh;
   }
   .container_urnaEletronia .field_camp .field_buttons .logo_urna {
     display: none;
@@ -180,7 +186,7 @@ body {
   .container_urnaEletronia .field_camp .field_buttons .btns_numbers {
     margin-top: 1rem;
     width: 98%;
-    height: 40vh;
+    height: 20vh;
   }
   .container_urnaEletronia .field_camp .field_buttons .btns_numbers .btns {
     width: 46px;
@@ -339,12 +345,12 @@ body {
 }
 .container_urnaEletronia .field_buttons .btns_options .branco, .container_urnaEletronia .field_buttons .btns_options .corrigir, .container_urnaEletronia .field_buttons .btns_options .confirmar {
   width: 100px;
-  height: 58px;
+  height: 44px;
   font-size: 17px;
   font-weight: 400;
   border-radius: 3px;
   border: none;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
 }
 .container_urnaEletronia .field_buttons .btns_options .branco:hover {
