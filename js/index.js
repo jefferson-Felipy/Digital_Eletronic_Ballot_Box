@@ -37,14 +37,11 @@ const cargo_cand = document.querySelector('.cargo_cand');
 const name_cand = document.querySelector('.name_cand');
 const partido_cand = document.querySelector('.partido_cand');
 const div_two = document.querySelector('.div_two');
-
 const cand_field = document.querySelector('.cand_field');
 const cand_field_two = document.querySelector('.cand_field_two');
-
 const number_cand_field_one = document.querySelector('.number_cand_field_one');
 const number_cand_field_two = document.querySelector('.number_cand_field_two');
 const img_field = document.querySelector('.img_field');
-
 let cand_inc = '';
 let votacao = '';
 
@@ -194,6 +191,14 @@ const confirmar = () => {
         cand_Nulo++;
     }
 };
+
+//Informacoes do candidato_
+const btn_info = document.querySelector('.btn_info');
+const btn_close_info = document.querySelector('.btn_close_info');
+const info_body = document.querySelector('.info_body');
+
+btn_info.addEventListener('click',() => info_body.style.display = 'block');
+btn_close_info.addEventListener('click',() => info_body.style.display = 'none');
 
 //-------------------------- PRELOAD ----------------------------
 //Preload do reload da página_
