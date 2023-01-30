@@ -70,13 +70,9 @@ const click_btn = (value) => {
     if ((cand_inc.length == 2) && (cand_inc === "13")) {
         votacao = '13';
         cargo_cand.textContent = candidatos[2].cargo;
-
         name_cand.textContent = `Nome: ${candidatos[0].nome}`;
-
         partido_cand.textContent = `Partido: ${candidatos[0].partido}`;
-
         img_field.innerHTML += "<img id='img_cand' src='./public/images/lula.jpg' alt='Candidato Lula'>";
-
         div_two.innerHTML = "<p class='msg_voto'>Aperte a tecla: <p class='msg_confirma'>CONFIRMA para CONFIRMAR o voto</p><p class='msg_corrige'>CORRIGE para CORRIGIR o voto</p></p>";
     }
     else if ((cand_inc.length == 2) && (cand_inc === "22")) {
@@ -134,7 +130,7 @@ const atualizacao = () => {
     cargo_cand.textContent = 'Cargo Eleitoral';
     name_cand.textContent = '';
     partido_cand.textContent = '';
-    img_field.innerHTML += "<img id='img_cand' src='./public/images/urna1.jpg' alt=Aguardando Votaçao'>";
+    img_field.innerHTML += "<img id='img_cand' src='./public/images/aguardando.jpg' alt=Aguardando Votaçao'>";
     div_two.textContent = '';
     cand_field_two.innerHTML = '';
 
