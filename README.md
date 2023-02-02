@@ -15,6 +15,19 @@ A Urna Eletronica eleitoral Digital é um projeto centrado em se assemelhar a um
 
 <h2>Preview</h2>
 
+<h4>Desktop</h4>
+
+
+<h4>Mobile</h4>
+
+![Screenshot_20230202-154035_Chrome](https://user-images.githubusercontent.com/119543591/216427772-5797719e-6ffc-4ef6-b391-28364f5b3846.png)
+
+![Screenshot_20230202-154046_Chrome](https://user-images.githubusercontent.com/119543591/216427829-3ee3e62c-12d5-462a-866a-86534594ffd1.png)
+
+![Screenshot_20230202-154057_Chrome](https://user-images.githubusercontent.com/119543591/216427872-ad0c765a-532b-4397-96f8-6154d1c7b203.png)
+
+![Screenshot_20230202-154122_Chrome](https://user-images.githubusercontent.com/119543591/216427928-bb0ca63e-e682-4d69-9f76-9ab51843e236.png)
+
 
 
 <h4>Desenvolvido por Jefferson</h4>
