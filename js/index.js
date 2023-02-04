@@ -44,7 +44,6 @@ const number_cand_field_two = document.querySelector('.number_cand_field_two');
 const img_field = document.querySelector('.img_field');
 let cand_inc = '';
 let votacao = '';
-
 let b = false;
 let c = false;
 
@@ -152,7 +151,7 @@ let cand_Branco = 0;
 const branco = () => {
     preload_C_B();
     atualizacao();
-    cand_Branco++;
+    localStorage.setItem("branco",++cand_Branco);
 };
 
 const corrigir = () => atualizacao();
@@ -163,32 +162,32 @@ const confirmar = () => {
     if (votacao === '13') {
         preload_C_B();
         atualizacao();
-        cand_Lula++;
+        localStorage.setItem("Lula",++cand_Lula);
     }
     else if (votacao === '22') {
         preload_C_B();
         atualizacao();
-        cand_Bolsonaro++;
+        localStorage.setItem("Bolsonaro",++cand_Bolsonaro)
     }
     else if (votacao === '12') {
         preload_C_B();
         atualizacao();
-        cand_Ciro++;
+        localStorage.setItem("Ciro",++cand_Ciro);
     }
     else if (votacao === '15') {
         preload_C_B();
         atualizacao();
-        cand_Simone++;
+        localStorage.setItem("Simone",++cand_Simone);
     }
     else if (votacao === '14') {
         preload_C_B();
         atualizacao();
-        cand_Kelmon++;
+        localStorage.setItem("Kelmon",++cand_Kelmon);
     }
     else if (votacao === 'Nulo') {
         preload_C_B();
         atualizacao();
-        cand_Nulo++;
+        localStorage.setItem("Nulo",++cand_Nulo);
     }
 };
 
@@ -199,6 +198,27 @@ const info_body = document.querySelector('.info_body');
 
 btn_info.addEventListener('click',() => info_body.style.display = 'block');
 btn_close_info.addEventListener('click',() => info_body.style.display = 'none');
+
+//-------------------------- Resultados ----------------------------
+const info_resul = document.querySelector('.info_resul');
+let soma_votos = [];
+let somas = 0;
+const result_votacao = () => {
+    soma_votos = [cand_Lula,cand_Bolsonaro,cand_Ciro,cand_Simone,cand_Kelmon,cand_Nulo,cand_Branco];
+
+    soma_votos.map((values) => {
+        somas += values;
+    });
+
+    return somas;
+}
+const insert_resul_field = () => {
+    let votos = localStorage.getItem("Total_de_votos");
+    let res_L,res_B,res_C,res_S,res_K,res_Br,res_N;
+
+    info_resul.innerHTML += "<p> Total de Votos: "+votos+" votos</p>";
+}
+
 
 //-------------------------- PRELOAD ----------------------------
 //Preload do reload da página_
@@ -241,6 +261,12 @@ the_end.addEventListener('click', () => {
     }, 5000);
     load_result.classList.add('preload');
     man_Dom();
+    localStorage.setItem("Total_de_votos",result_votacao());
+    insert_resul_field();
 });
+
 //Reiniciar a votacao_
-const reiniciar = () => location.reload();
+const reiniciar = () => {
+    location.reload();
+    localStorage.clear();
+}

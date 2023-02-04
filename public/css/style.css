@@ -418,8 +418,8 @@ body {
   cursor: pointer;
 }
 @media (max-width: 1005px) {
-  .container_urnaEletronia .container_urnaEletronia h1 {
-    font-size: 14px;
+  .container_urnaEletronia .informa_eleicao {
+    width: 98%;
   }
 }
 
